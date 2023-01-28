@@ -10,6 +10,7 @@ import java.io.IOException;
 
 /**
  * JavaFX App
+ * This part of the code creates an interface for the server messages through referencing FXML
  */
 public class AppServer extends Application {
 
@@ -28,7 +29,7 @@ public class AppServer extends Application {
     }
 
     private static Parent loadFXML(String fxml) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(AppServer.class.getResource(fxml + ".fxml"));
+        FXMLLoader fxmlLoader = new FXMLLoader(AppServer.class.getResource("primary.fxml"));
         return fxmlLoader.load();
     }
 

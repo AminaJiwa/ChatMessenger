@@ -9,7 +9,9 @@ import java.net.ServerSocket;
 import java.net.Socket;
 
 import javafx.scene.layout.VBox;
-
+/*
+ * This part of the code is the backend functionality for the server to send and receive messages
+ */
 public class Server{
     //used to listen for incoming connections
     private ServerSocket serverSocket;

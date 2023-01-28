@@ -23,6 +23,9 @@ import javafx.scene.paint.Color;
 import javafx.scene.text.Text;
 import javafx.scene.text.TextFlow;
 
+/* 
+ * This part of the code allows the backend functionality to talk to the GUI for the SERVER
+ */
 public class PrimaryController implements Initializable{
 //implements interfaces, interface only contains abstract methods
 //interface is a blueprint of a class
@@ -79,7 +82,7 @@ public class PrimaryController implements Initializable{
             @Override
             public void handle(ActionEvent event) {
                 String messageToSend = tf_message.getText();
-                if(!messageToSend.isBlank()){
+                if(!messageToSend.isEmpty()){
                     //horizontal box, send message to GUI
                     HBox hBox = new HBox();
                     hBox.setAlignment(Pos.CENTER_RIGHT);
@@ -89,9 +92,9 @@ public class PrimaryController implements Initializable{
                      //text flow wraps the text, so if message too long, flows onto next line instead of "...cont"
                     TextFlow textFlow = new TextFlow(text);
 
-                    textFlow.setStyle("-fx-color: rgb(239, 242, 255 " +
-                    "-fx-background-color: rgb(170, 103, 117)" +
-                    "-fx-background-radius: 20px" );
+                    textFlow.setStyle("-fx-color: rgb(239, 242, 255); " +
+                    "-fx-background-color: rgb(170, 103, 117);" +
+                    "-fx-background-radius: 20px;" );
 
                     textFlow.setPadding(new Insets(5, 10, 5, 10));
                     text.setFill(Color.color(0.934,0.945,0.966));
@@ -118,9 +121,9 @@ public class PrimaryController implements Initializable{
 
             Text text = new Text(messageFromClient);
             TextFlow textFlow = new TextFlow(text);
-            textFlow.setStyle("-fx-color: rgb(239, 242, 255 " +
-                    "-fx-background-color: rgb(111, 107, 209)" +
-                    "-fx-background-radius: 20px" );
+            textFlow.setStyle("-fx-color: rgb(239, 242, 255); " +
+                    "-fx-background-color: rgb(111, 107, 209);" +
+                    "-fx-background-radius: 20px;" );
             textFlow.setPadding(new Insets(5, 10, 5, 10));
             hBox.getChildren().add(textFlow);
             //we CAN'T update vbox, as we cant update GUI from a thread other than the application thread

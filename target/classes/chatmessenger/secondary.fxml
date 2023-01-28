@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<!--<?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.control.Label?>
@@ -9,33 +9,27 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.layout.GridPane?>
-<!--FXML is an XML-based language designed to build the user interface for JavaFX applications. You can use 
-   FXML to build an entire Scene or part of a Scene. FXML allows application developers to separate the logic 
-   for building the UI from the business logic-->
 
-<!--AnchorPane provides a GUI, AnchorPane is more flexible and the children of AnchorPane can be dynamically resized 
-as it allows the edges of the children nodes to be "anchored" to the edges of the AnchorPane. In other words, 
-the child element will 'hold onto' the sides of the AnchorPane. -->
-<!--preferred height and width of the pane-->
+<!This part of the code creates the GUI for the CLIENT
+
+
 <AnchorPane fx:id="ap_main" fx:controller="chatmessenger.SecondaryController"
     
    prefHeight="396" prefWidth="478"
     xmlns:fx="http://javafx.com/fxml/1">
 
     <children>
-    <!--children of the pane-->
-    <!--layoutx = x coordinates on pane-->
+    
+    
     <Button fx:id="button_send" layoutX="404" layoutY="338" text="Send"></Button>
-    <!--to enter messages-->
+    
     <TextField fx:id="tf_message" layoutX="30" layoutY="338" 
                prefWidth="361" prefHeight="26"></TextField>
-   <!--pane for messages, allowing to scroll up and down,fitToWidth make the ScrollPane fit content 
-   to the width of the ScrollPane viewport-->
+  
    <ScrollPane fx:id="sp_main" layoutX="30" layoutY="70" 
                prefWidth="418" prefHeight="256" fitToWidth="true">
       <content>
-      <!-- VBox lays out its children in form of vertical columns. If the vbox has a border
-       and/or padding set, then the contents will be layed out within those insets-->
+     
          <VBox fx:id="vbox_messages" prefHeight="248" prefWidth="412">
         </VBox>
       </content>
@@ -48,3 +42,5 @@ the child element will 'hold onto' the sides of the AnchorPane. -->
     </Label>
    </children>
 </AnchorPane> 
+
+-->
